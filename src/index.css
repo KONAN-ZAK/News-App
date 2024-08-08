@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-gray-600 bg-sky-50;
+    
+  }
+
+  /*
+.downBarInfo img {
+  @apply md:w-20  xxs:w-12;
+}
+
+.downBarInfo div {
+  @apply flex flex-col items-center justify-center content-center;
+} */
+}
