@@ -17,6 +17,12 @@ export default {
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
       },
+
+      colors: {
+        sidebarColor: '#0c0f12',
+        mainColor: '#12161b',
+        sideScrollColor: '#181e25',
+      },
     },
   },
   plugins: [],

@@ -4,7 +4,7 @@ import leftArrow from './assets/leftArrow.svg';
 import Card1 from './Card1';
 function NewsSideScroller() {
   return (
-    <div className="flex items-center">
+    <div className="flex items-center bg-sideScrollColor p-20 rounded-xl">
       <div>
         <img
           src={leftArrow}

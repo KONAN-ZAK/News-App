@@ -4,9 +4,7 @@ function NavBar() {
   return (
     <header className=" flex h-24 justify-between w-full p-10 items-center">
       {/* title  */}
-      <div>
-        <h1 className="md:text-4xl bg-transparent ">Breaking News</h1>
-      </div>
+      
 
       {/* search and drop down options  */}
       <div className="flex  gap-10 items-center h-[3rem]">

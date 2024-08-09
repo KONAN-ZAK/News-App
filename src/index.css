@@ -4,8 +4,7 @@
 
 @layer base {
   body {
-    @apply font-sans text-gray-600 bg-sky-50;
-    
+    @apply font-sans text-gray-100 ;
   }
 
   /*
