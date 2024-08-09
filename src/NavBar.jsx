@@ -2,9 +2,8 @@ import searchIcon from './assets/search_icon.svg';
 
 function NavBar() {
   return (
-    <header className=" flex h-24 justify-between w-full p-10 items-center">
+    <header className=" flex h-24 justify-between w-full px-10 items-center">
       {/* title  */}
-      
 
       {/* search and drop down options  */}
       <div className="flex  gap-10 items-center h-[3rem]">

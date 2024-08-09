@@ -1,41 +1,27 @@
 import logoPage from './assets/logo.svg';
+import { sideBarData } from './sideBarData';
 
 function SideBar() {
   return (
-    <div className="bg-sidebarColor flex flex-col h-screen w-[25rem] gap-5 items-center justify-start">
-      <div className="flex justify-center items-center gap-1 w-full h-40">
+    <div className="bg-sidebarColor flex flex-col h-screen w-[25rem] gap-10 items-center justify-start text-md">
+      <div className="flex justify-center items-center gap-1 w-full h-36 ">
         <img src={logoPage} alt="logo" className="w-14" />
         <h1 className="text-4xl font-extrabold">News</h1>
       </div>
 
-      <div className="w-full h-20 text-md font-bold text-center content-start">
+      <div className="w-full h-8 font-bold text-center content-center">
         <h1>BREAKING NEWS</h1>
       </div>
 
-      <div className="w-full h-16 text-md text-center content-center text-gray-500">
-        SCIENCE & TECH
-      </div>
-      <div className="w-full h-16 text-md text-center content-center text-gray-500">
-        SPORT
-      </div>
-      <div className="w-full h-16 text-md text-center content-center text-gray-500">
-        FINANCE
-      </div>
-      <div className="w-full h-16 text-md text-center content-center text-gray-500">
-        LIFESTYLE
-      </div>
-      <div className="w-full h-16 text-md text-center content-center text-gray-500">
-      SCIENCE & TECH
-      </div>
-      <div className="w-full h-16 text-md text-center content-center text-gray-500">
-      SCIENCE & TECH
-      </div>
-      <div className="w-full h-16 text-md text-center content-center text-gray-500">
-      SCIENCE & TECH
-      </div>
-      <div className="w-full h-16 text-md text-center content-center text-gray-500">
-      SCIENCE & TECH
-      </div>
+      {sideBarData.map((sideData) => (
+        <div
+          key={sideData.id}
+          className="w-full h-8 text-center content-center text-gray-500 *: hover:border-mainColor hover:ring-mainColor hover:ring-2
+     hover:-translate-y-1 duration-300"
+        >
+          {sideData.title}
+        </div>
+      ))}
     </div>
   );
 }
