@@ -96,16 +96,30 @@ export const newsData = [
       'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolores maxime, rerum impedit assumenda amet iste, ad mollitia',
     img: cardLogo,
   },
-  // {
-  //   id: '17',
-  //   description:
-  //     'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolores maxime, rerum impedit assumenda amet iste, ad mollitia',
-  //   img: cardLogo,
-  // },
-  // {
-  //   id: '18',
-  //   description:
-  //     'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolores maxime, rerum impedit assumenda amet iste, ad mollitia',
-  //   img: cardLogo,
-  // },
+  {
+    id: '17',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolores maxime, rerum impedit assumenda amet iste, ad mollitia',
+    img: cardLogo,
+  },
+  {
+    id: '18',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolores maxime, rerum impedit assumenda amet iste, ad mollitia',
+    img: cardLogo,
+  },
+  {
+    id: '19',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolores maxime, rerum impedit assumenda amet iste, ad mollitia',
+    img: cardLogo,
+  },
+  {
+    id: '20',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolores maxime, rerum impedit assumenda amet iste, ad mollitia',
+    img: cardLogo,
+  },
+ 
+ 
 ];

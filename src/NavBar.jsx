@@ -2,35 +2,35 @@ import searchIcon from './assets/search_icon.svg';
 
 function NavBar() {
   return (
-    <header className=" flex h-24 justify-between w-full px-10 items-center">
-      {/* title  */}
-
+    <header>
       {/* search and drop down options  */}
-      <div className="flex  gap-10 items-center h-[3rem]">
-        <label className="relative w-80 h-full ">
-          <span className="absolute left-0 h-full ">
-            <img
-              src={searchIcon}
-              alt="search_icon"
-              className="w-8 mx-1 h-full cursor-pointer"
-            />
+      <div className="flex h-[5rem] items-center justify-between px-4 text-sm">
+        {/* search bar  */}
+
+        <label className="relative w-60 flex items-center">
+          <span className="absolute left-3 text-slate-500 h-full content-center cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="30px"
+              fill="currentColor"
+            >
+              <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+            </svg>
           </span>
+
           <input
-            className="placeholder:italic placeholder:text-slate-500
-            bg-gradient-to-r from-blue-100 to-blue-200 
-            w-full border border-slate-200 rounded-lg py-2 pl-12 pr-3 shadow-xl
-           focus:border-sky-300 focus:ring-sky-400 
-            md: text-lg"
+            className=" placeholder:italic placeholder:text-slate-500 text-slate-300
+            bg-transparent outline-none 
+            w-full border border-slate-500 rounded-full py-2 pl-12 pr-3"
             placeholder="Search for News"
           />
         </label>
-        {/* ,..................... */}
-        <select
-          className="p-3 bg-gradient-to-r from-blue-100 to-blue-200 outline-none text-gray-600
-           rounded-lg shadow-lg transition-all duration-100
-           focus:border-sky-300 focus:ring-sky-500 focus:ring-1 "
-        >
-          <option value="International">ENT</option>
+
+        {/*...........Language options.......... */}
+        <select className="p-3 bg-mainColor">
+          <option value="International">INT</option>
           <option value="English">EN</option>
           <option value="Arabic">AR</option>
           <option value="Turkish">TR</option>

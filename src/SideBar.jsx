@@ -9,14 +9,14 @@ function SideBar() {
         <h1 className="text-4xl font-extrabold">News</h1>
       </div>
 
-      <div className="w-full h-8 font-bold text-center content-center">
+      <div className="w-full h-8 font-bold text-center content-center ">
         <h1>BREAKING NEWS</h1>
       </div>
 
       {sideBarData.map((sideData) => (
         <div
           key={sideData.id}
-          className="w-full h-8 text-center content-center text-gray-500 *: hover:border-mainColor hover:ring-mainColor hover:ring-2
+          className=" hover:cursor-pointer w-full h-8 text-center content-center text-gray-500 *: hover:border-mainColor hover:ring-mainColor hover:ring-2
      hover:-translate-y-1 duration-300"
         >
           {sideData.title}
