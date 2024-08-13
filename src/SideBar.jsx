@@ -3,7 +3,11 @@ import { sideBarData } from './sideBarData';
 
 function SideBar() {
   return (
-    <div className="bg-sidebarColor flex flex-col h-screen w-[25rem] gap-10 items-center justify-start text-md">
+    <div
+      className="bg-sidebarColor flex flex-col h-screen  gap-10 items-center justify-start text-md
+    xxs:w-[0rem]
+    lg:w-[18rem]"
+    >
       <div className="flex justify-center items-center gap-1 w-full h-36 ">
         <img src={logoPage} alt="logo" className="w-14" />
         <h1 className="text-4xl font-extrabold">News</h1>

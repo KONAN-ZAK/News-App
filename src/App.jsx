@@ -8,8 +8,10 @@ function App() {
   return (
     //flex row has sideBar and
     <div className=" flex flex-row ">
-      <SideBar></SideBar>
-      <div className=" flex flex-col  h-screen w-full bg-mainColor">
+      <div className='flex-1'>
+        <SideBar></SideBar>
+      </div>
+      <div className=" flex flex-col  h-screen w-full bg-mainColor ">
         <NavBar></NavBar>
 
         <div className="  h-full  flex flex-col gap-8 p-10 overflow-y-scroll ">
