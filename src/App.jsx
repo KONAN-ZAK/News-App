@@ -11,10 +11,11 @@ function App() {
       <div className='flex-1'>
         <SideBar></SideBar>
       </div>
-      <div className=" flex flex-col  h-screen w-full bg-mainColor ">
+      <div className=" flex flex-col h-screen w-full bg-mainColor">
         <NavBar></NavBar>
 
-        <div className="  h-full  flex flex-col gap-8 p-10 overflow-y-scroll ">
+        <div className="h-full flex flex-1 flex-col gap-5 p-4 lg:p-8 overflow-y-scroll 
+        lg:gap-5 ">
           <NewsSideScroller></NewsSideScroller>
           <NewsGeneral></NewsGeneral>
         </div>
@@ -22,5 +23,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

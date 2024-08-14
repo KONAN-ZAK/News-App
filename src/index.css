@@ -9,7 +9,7 @@
 /* Custom styles using @layer directive */
 @layer base {
   body {
-    @apply font-sans text-gray-100 text-[0.8rem];
+    @apply font-sans text-gray-100 lg:text-[0.8rem] xxs:text-[0.5rem];
   }
 }
 

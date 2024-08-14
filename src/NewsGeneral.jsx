@@ -8,7 +8,8 @@ function NewsGeneral() {
     xxs:flex-wrap 
     md:flex-nowrap"
     >
-      <div className="news grid grid-cols-4 grid-rows-auto  gap-4">
+      {/*    TODO      tomoorrow the center the card inside the grid  *:justify-between */}
+      <div className=" grid  grid-cols-2 lg:grid-cols-4 grid-rows-auto w-full gap-6 lg:gap-10 ">
         {newsData.map((data) => (
           <div key={data.id}>
             <Card1 />
