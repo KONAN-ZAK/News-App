@@ -1,18 +1,17 @@
 import React from 'react';
-import newsCard from './assets/newsCard.svg';
+import cardlogo from './assets/newsCard.svg';
 function Card1() {
   return (
     // THE CARD
     <div
-      className="text-gray-300 bg-sideScrollColor cursor-pointer lg:px-4 px-2 py-1 lg:w-[17rem]  lg:h-full 
-    rounded-[10px]  
-      hover:border-sky-500 hover:ring-sky-500 hover:ring-2
-     hover:-translate-y-1 duration-300
-     w-[10rem] h-[10rem] "
+      className="text-gray-300 bg-sideScrollColor cursor-pointer px-2 py-2 lg:px-4 
+      w-fit h-[10rem] lg:w-[13rem] 2xl:w-[17rem]  lg:h-full 
+      rounded-lg hover:border-sky-500 hover:ring-sky-500 hover:ring-2
+      hover:-translate-y-1 duration-300  "
     >
       {/* image section */}
-      <div className="cardImage w-full h-[5rem] lg:h-[9rem] ">
-        <img src={newsCard} alt="card_Image" className=" h-full w-full" />
+      <div className="cardImage w-full h-[5rem] lg:h-[7rem] 2xl:h-[9rem] bg-gray-100 rounded-lg">
+        <img src={cardlogo} alt="card_Image" className=" h-full w-full" />
       </div>
 
       {/*the card news title time*/}

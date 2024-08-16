@@ -3,10 +3,10 @@
 function Footer() {
   return (
     <div
-      className="flex w-[26rem] h-screen sticky top-0 bg-transparent p-8
-     text-gray-500 font-bold"
+      className="flex md:w-[20rem] lg:w-[20rem] 2xl:w-[26rem] lg:h-screen sticky top-0 bg-transparent p-2 2xl:pr-8 2xl:py-8
+      text-gray-500 font-bold "
     >
-      <div className="flex gap-5 h-8 flex-wrap *:cursor-pointer">
+      <div className="flex gap-5 h-8 flex-wrap *:cursor-pointer lg:text-[0.6rem]">
         <p>Advertisement</p>
         <p>About</p>
         <p>Contact</p>
@@ -14,13 +14,13 @@ function Footer() {
         <p>Privacy Policy</p>
         <p>&copy; 2024 BNews.</p>
         {/* the svg icons */}{' '}
-        <div className="flex gap-5 h-10 flex-wrap  ">
+        <div className="flex gap-5 h-10 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
             y="0px"
-            width="20"
-            height="20"
+            width="18"
+            height="18"
             viewBox="0 0 48 48"
             fill="currentColor"
           >
@@ -30,8 +30,8 @@ function Footer() {
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
             y="0px"
-            width="20"
-            height="20"
+            width="18"
+            height="18"
             viewBox="0 0 30 30"
             fill="currentColor"
           >
@@ -41,8 +41,8 @@ function Footer() {
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
             y="0px"
-            width="20"
-            height="20"
+            width="18"
+            height="18"
             viewBox="0 0 30 30"
             fill="currentColor"
           >
@@ -52,8 +52,8 @@ function Footer() {
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
             y="0px"
-            width="20"
-            height="20"
+            width="18"
+            height="18"
             viewBox="0 0 30 30"
             fill="currentColor"
           >

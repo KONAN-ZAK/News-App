@@ -8,8 +8,8 @@ export default {
         xxs: '320px', // Custom breakpoint for extra small devices
         xs: '480px', // Extra small devices (phones)
         sm: '640px', // Small devices (tablets)
-        md: '700px', // Medium devices (small laptops)
-        // 'md': '768px',   // Medium devices (small laptops)
+        md: '730px', // Medium devices (small laptops)
+       'mmd': '850px',   // Medium devices (small laptops)
         lg: '1024px', // Large devices (desktops)
         xl: '1280px', // Extra large devices (large desktops)
         '2xl': '1536px', // 2x large devices (very large screens)

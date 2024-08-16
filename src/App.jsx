@@ -3,7 +3,7 @@ import SideBar from './SideBar';
 import Footer from './Footer';
 import NewsSideScroller from './NewsSideScroller';
 import NewsGeneral from './NewsGeneral';
-import fotoo from './assets/image4.png';
+
 function App() {
   return (
     //flex row has sideBar and
@@ -14,8 +14,7 @@ function App() {
       <div className=" flex flex-col h-screen w-full bg-mainColor">
         <NavBar></NavBar>
 
-        <div className="h-full flex flex-1 flex-col gap-5 p-4 lg:p-8 overflow-y-scroll 
-        lg:gap-5 ">
+        <div className="h-full flex flex-col gap-5 p-4 lg:p-8 overflow-y-scroll ">
           <NewsSideScroller></NewsSideScroller>
           <NewsGeneral></NewsGeneral>
         </div>

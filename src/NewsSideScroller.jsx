@@ -19,7 +19,7 @@ function NewsSideScroller() {
            hover:-translate-x-1 duration-500
            lg:block hidden"
         />
-        {Array.from({ length: 5 })?.map((item) => (
+        {Array.from({ length: 4 })?.map((item) => (
           <Card1 />
         ))}
         <img
@@ -32,8 +32,19 @@ function NewsSideScroller() {
         />{' '}
       </div>
       {/* the card phone */}
-      <div className="flex flex-1 gap-4 justify-evenly w-full items-center lg:hidden rounded-lg py-2">
+      <div className="flex flex-1 gap-4 justify-evenly w-full items-center lg:hidden md:hidden rounded-lg py-2">
         {Array.from({ length: 2 })?.map((item) => (
+          <Card1 />
+        ))}{' '}
+        
+      </div>
+      <div className="md:flex flex-1 gap-4 justify-evenly w-full items-center xxs:hidden mmd:hidden lg:hidden rounded-lg py-2">
+        {Array.from({ length: 3 })?.map((item) => (
+          <Card1 />
+        ))}{' '}
+      </div>
+      <div className="mmd:flex flex-1 gap-4 justify-evenly w-full items-center xxs:hidden md:hidden lg:hidden rounded-lg py-2">
+        {Array.from({ length: 3 })?.map((item) => (
           <Card1 />
         ))}{' '}
       </div>
