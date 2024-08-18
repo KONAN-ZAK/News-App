@@ -7,14 +7,14 @@ import NewsGeneral from './NewsGeneral';
 function App() {
   return (
     //flex row has sideBar and
-    <div className=" flex flex-row ">
-      <div className='flex-1'>
+    <div className="flex flex-row ">
+      
         <SideBar></SideBar>
-      </div>
+      
       <div className=" flex flex-col h-screen w-full bg-mainColor">
         <NavBar></NavBar>
 
-        <div className="h-full flex flex-col gap-5 p-4 lg:p-8 overflow-y-scroll ">
+        <div className="h-full flex flex-col gap-5 p-4 overflow-y-scroll lg:p-8">
           <NewsSideScroller></NewsSideScroller>
           <NewsGeneral></NewsGeneral>
         </div>

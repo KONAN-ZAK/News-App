@@ -4,7 +4,7 @@ import { sideBarData } from './sideBarData';
 function SideBar() {
   return (
     <div
-      className="bg-sidebarColor flex flex-col h-screen  gap-10 items-center justify-start text-md
+      className="bg-sidebarColor flex flex-col h-screen gap-10 items-center justify-start text-md
     w-[0rem]
     lg:w-[13rem]
     2xl:w-[18rem]"
@@ -23,7 +23,7 @@ function SideBar() {
           key={sideData.id}
           className=" hover:cursor-pointer w-full h-8 text-center content-center text-gray-500 
           *: hover:border-mainColor hover:ring-mainColor hover:ring-2
-     hover:-translate-y-1 duration-300"
+          hover:-translate-y-1 duration-300"
         >
           {sideData.title}
         </div>

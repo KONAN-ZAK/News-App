@@ -14,9 +14,12 @@ function NavBar() {
 
   return (
     <header>
-      <div className="flex lg:h-[5rem] xxs:h-[4rem] items-center justify-between text-sm w-full lg:border-none xxs:border-b xxs:border-gray-500 p-4">
-         {/* sidebar icon*/}
-        <div className="xxs:block lg:hidden w-28">
+      <div
+        className="flex h-[4rem] border-b border-gray-500 p-4 items-center justify-between text-sm w-full 
+                  lg:h-[5rem] lg:border-none"
+      >
+        {/* sidebar icon*/}
+        <div className="flex w-28 lg:hidden ">
           <Menu
             className="text-white cursor-pointer"
             sx={{ fontSize: '2rem' }}
@@ -47,20 +50,15 @@ function NavBar() {
           />
         </label>
 
-
         {/* the icon  */}
-        <div className='flex flex-1 justify-center '>
+        <div className="flex flex-1 justify-center">
           {/* logo  */}
-          <img
-            src={logo}
-            alt="logo"
-            className=" h-7 lg:hidden "
-          />
+          <img src={logo} alt="logo" className=" h-7 lg:hidden " />
         </div>
 
         {/* search bar for mobile screen  */}
-        <div className="xxs:h-[2.1rem] xxs:relative  xxs:top-[0.2px]">
-          <label className="relative flex items-center xxs:mb-5 xxs:w-32 xxs:flex lg:hidden w-full">
+        <div className="h-[2.1rem] top-[0.2px]">
+          <label className="relative flex items-center mb-5 w-32 lg:hidden ">
             {/* Input field*/}
             <input
               className={`placeholder:italic placeholder:text-slate-500 placeholder:text-[0.6rem] 
@@ -86,7 +84,7 @@ function NavBar() {
         </div>
 
         {/* Language options */}
-        <select className="p-3 bg-mainColor xxs:hidden lg:block">
+        <select className="p-3 bg-mainColor hidden lg:flex">
           <option value="International">INT</option>
           <option value="English">EN</option>
           <option value="Arabic">AR</option>

@@ -3,8 +3,11 @@
 function Footer() {
   return (
     <div
-      className="flex md:w-[20rem] lg:w-[20rem] 2xl:w-[26rem] lg:h-screen sticky top-0 bg-transparent p-2 2xl:pr-8 2xl:py-8
-      text-gray-500 font-bold "
+      className="flex sticky top-0 bg-transparent text-gray-500 font-bold p-2
+      md:w-[20rem] md:h-screen   
+      lg:w-[20rem]  lg:px-5
+      2xl:w-[26rem] 2xl:pr-8 2xl:py-8
+      "
     >
       <div className="flex gap-5 h-8 flex-wrap *:cursor-pointer lg:text-[0.6rem]">
         <p>Advertisement</p>
