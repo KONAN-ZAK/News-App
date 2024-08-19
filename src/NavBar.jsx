@@ -1,31 +1,45 @@
 import { Menu } from '@mui/icons-material';
 import searchIcon from './assets/search_icon.svg';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import logo from './assets/logo.svg';
+import SideBar from './SideBar';
+import { SideBarContext } from './Context/SideBarContext';
 
 function NavBar() {
   // State to manage the visibility of the input
   const [isSearchVisible, setIsSearchVisible] = useState(false);
 
+  const { setIsMenuVisible } = useContext(SideBarContext);
   // Function to toggle the visibility
   const toggleSearchVisibility = () => {
     setIsSearchVisible(!isSearchVisible);
   };
-
+  // Function to toggle the visibility of the sidebar
+  const toggleMenuVisibility = () => {
+    setIsMenuVisible((prev) => !prev);
+  };
+  // Function to hide the sidebar when an option is clicked
+  const handleSidebarOptionClick = () => {
+    setIsMenuVisible(false); // Close the sidebar when an option is clicked
+  };
   return (
     <header>
       <div
         className="flex h-[4rem] border-b border-gray-500 p-4 items-center justify-between text-sm w-full 
-                  lg:h-[5rem] lg:border-none"
+                  lg:h-[5rem] lg:border-none "
       >
-        {/* sidebar icon*/}
-        <div className="flex w-28 lg:hidden ">
+        {/* Menu icon*/}
+        <div
+          className="flex w-28 lg:hidden relative "
+          onClick={toggleMenuVisibility}
+        >
           <Menu
             className="text-white cursor-pointer"
             sx={{ fontSize: '2rem' }}
           />
         </div>
-        {/* Search bar for pc screen*/}
+
+        {/* Search bar for pc screen */}
         <label className="relative lg:flex items-center lg:m-0 mb-5 w-40 lg:w-60 xxs:hidden">
           <span
             onClick={toggleSearchVisibility}
