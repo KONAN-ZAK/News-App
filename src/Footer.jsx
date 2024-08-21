@@ -16,7 +16,8 @@ function Footer() {
         <p>Terms of Use</p>
         <p>Privacy Policy</p>
         <p>&copy; {new Date().getFullYear()} BNews.</p>
-        {/* the svg icons */}{' '}
+
+        {/* the svg icons */}
         <div className="flex gap-5 h-10 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"

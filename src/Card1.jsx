@@ -1,6 +1,7 @@
 import React from 'react';
 import cardlogo from './assets/newsCard.svg';
 function Card1() {
+  
   return (
     // THE CARD
     <div
