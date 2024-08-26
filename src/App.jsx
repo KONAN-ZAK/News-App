@@ -33,7 +33,6 @@ function App() {
       }&page=${pageNumber}
         &language=${lang}&apiKey=${ApiKey}`);
 
-
       const data = await response.json();
       if (data.articles) {
         setArticles((prevArticles) => [...prevArticles, ...data.articles]);
