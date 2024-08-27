@@ -1,18 +1,22 @@
 import React from 'react';
 import cardlogo from './assets/newsCard.svg';
-function Card1() {
-  
+import { useNavigate } from 'react-router-dom';
+function Card1({ article, index, className }) {
+  console.log('this is 02 article', article)
+
+    const navigate = useNavigate();
+
+   const handleNewDetailsPage =(index)=>{
+       navigate(`/newsDetails/${index}`);
+   }
+
   return (
     // THE CARD
-    <div
-      className="text-gray-300 bg-sideScrollColor cursor-pointer px-2 py-2 w-fit h-[10rem] 
-      rounded-lg hover:border-sky-500 hover:ring-sky-500 hover:ring-2 hover:-translate-y-1 duration-300 
-        lg:h-full  lg:px-4 
-       "
-    >
+
+    <div className={className} onClick={()=>handleNewDetailsPage(index)}>
       {/* image section */}
       <div className="cardImage w-full h-[5rem] lg:h-[7rem] 2xl:h-[9rem] bg-gray-100 rounded-lg">
-        <img src={cardlogo} alt="card_Image" className=" h-full w-full" />
+        <img src={article?.urlToImage} alt="hggt" className=" h-full w-full" />
       </div>
 
       {/*the card news title time*/}
@@ -23,8 +27,7 @@ function Card1() {
 
       {/*the card description*/}
       <div className="w-full lg:h-[5rem] overflow-hidden">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
-        dolores maxime, rerum impedit
+        {article?.title}
       </div>
     </div>
   );

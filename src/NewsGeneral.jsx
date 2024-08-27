@@ -1,7 +1,8 @@
 import Card1 from './Card1';
 import Footer from './Footer';
 import { newsData } from './data';
-function NewsGeneral() {
+function NewsGeneral({ articles }) {
+  console.log('This is the general article',articles);
   return (
     <div
       className="flex justify-between gap-4 flex-wrap md:flex-nowrap 
@@ -12,10 +13,8 @@ function NewsGeneral() {
       md:grid-cols-3 
       2xl:grid-cols-4 2xl:gap-5 "
       >
-        {newsData.map((data) => (
-          <div key={data.id}>
-            <Card1 />
-          </div>
+        {articles?.map((article, index) => (
+          <Card1 article={article} key={index} index={index} />
         ))}
       </div>
       <Footer></Footer>

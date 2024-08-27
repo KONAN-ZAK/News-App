@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBar from './NavBar';
 import SideBar from './SideBar';
-
 import NewsHolder from './NewsHolder';
-import ExternalNewsPage from './ExternalNewsPage';
+import NewsDetailsPage from './NewsDetailsPage';
+
+// import ExternalNewsPage from './ExternalNewsPage';
 
 function App() {
   const ApiKey = 'e69df8ef03a24d3f9cfc643059a92e52';
@@ -38,6 +39,7 @@ function App() {
       &language=${lang}&apiKey=${ApiKey}`);
       // response is awaited and then converted to JSON.
       const data = await response.json();
+      console.log('This is the data',data);
 
       if (data.articles) {
         setArticles((prevArticles) => [...prevArticles, ...data.articles]);
@@ -50,6 +52,7 @@ function App() {
       // After the request is completed (whether successful or not), loading is set to false
       setLoading(false);
     }
+
     console.log(articles);
   };
   ///////////////////////////
@@ -106,23 +109,25 @@ function App() {
 
   ///////////////////////////////////////////////
   return (
+    
     <Router>
-      {/* flex row has (sideBar ) and (NavBar & NewsSideScroller & NewsGeneral) */}
+      {/* // flex row has (sideBar ) and (NavBar & NewsSideScroller & NewsGeneral) */}
       <div className="flex flex-row ">
-        <SideBar></SideBar>
-        {/* Flex-col (NavBar) and (NewsSideScroller & NewsGeneral)   */}
+        <SideBar />
+
+        {/* flex-col (NavBar) and (NewsSideScroller & NewsGeneral)   */}
         <div className=" flex flex-col h-screen w-full bg-mainColor">
-          <NavBar></NavBar>
+          <NavBar />
+
           {/* Flex-col (NewsSideScroller) and ( NewsGeneral)   */}
           <div className="h-full flex flex-col gap-5 p-4 overflow-y-scroll lg:p-8">
             {/* holding 2 components for Routering it  */}
+
             <Routes>
-            <Route path="/" element={<NewsHolder articles={articles} />} />
-            {/* <Route
-              path="/article/:id"
-              element={<ExternalNewsPage articles={articles} />}
-            /> */}
+              <Route path="/" element={<NewsHolder articles={articles} />} />
+              <Route path="/newsDetails/:id" element={<NewsDetailsPage articles={articles} />} />
             </Routes>
+            {loading && <div className="text-center">Loading...</div>}
           </div>
         </div>
       </div>
