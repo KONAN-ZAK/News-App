@@ -8,19 +8,25 @@ const NewsDetailsPage = ({ articles }) => {
   console.log('show this details', newData);
   return (
     <div className="w-full h-full">
-      <div className="w-full h-full  flex flex-col gap-4">
-        <div className="w-full bg-green-300 h-[24rem]">
-          <img
+      <div className="w-full h-full flex flex-col gap-4">
+        <div className="w-full flex md:flex-row flex-col  gap-4 h-fit">
+        <div className='h-full xxs:w-full md:w-[20rem] xl:w-[30rem] 2xl:w-[40rem] '>
+        <img
             src={newData?.urlToImage}
             alt="news Image"
-            className="w-full h-full"
+            className=" w-full h-full object-cover"
           />
         </div>
-        <div className="w-full h-fit">
-          <h1>{newData?.title}</h1>
+        {/* xxs:bg-red-600 xs:bg-red-300 sm:bg-orange-700 md:bg-indigo-900 lg:bg-blue-600 xl:bg-emerald-900 2xl:bg-yellow-500  */}
+          <div className='flex flex-col flex-1 gap-4'>
+          <div className="w-full h-fit">
+          <h1 className='font-bold text-[2rem]'>{newData?.title}</h1>
         </div>
 
-        <div className="w-full h-fit">{newData?.description}</div>
+        <div className="w-full h-fit text-[1rem] lg:text-[1.2rem]">{newData?.description}</div>
+          </div>
+        </div>
+       
       </div>
     </div>
   );

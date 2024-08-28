@@ -1,6 +1,5 @@
 import Card1 from './Card1';
 import Footer from './Footer';
-import { newsData } from './data';
 function NewsGeneral({ articles }) {
   console.log('This is the general article',articles);
   return (
@@ -9,12 +8,15 @@ function NewsGeneral({ articles }) {
     "
     >
       <div
-        className=" grid  grid-cols-2 grid-rows-auto w-full gap-6 auto-cols-fr 
+        className=" grid grid-cols-2 grid-rows-auto w-full gap-3 auto-cols-fr 
       md:grid-cols-3 
       2xl:grid-cols-4 2xl:gap-5 "
       >
         {articles?.map((article, index) => (
-          <Card1 article={article} key={index} index={index} />
+          <Card1 article={article} key={index} index={index}  className="p-2 rounded-lg cursor-pointer hover:border-sky-500
+          hover:ring-sky-500 hover:ring-2 hover:-translate-y-1 duration-300
+              bg-sideScrollColor"
+                   />
         ))}
       </div>
       <Footer></Footer>

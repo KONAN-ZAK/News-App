@@ -8,7 +8,7 @@ import NewsDetailsPage from './NewsDetailsPage';
 // import ExternalNewsPage from './ExternalNewsPage';
 
 function App() {
-  const ApiKey = 'e69df8ef03a24d3f9cfc643059a92e52';
+  const ApiKey = 'dbb107fa60514a0cb3c0a4abece435d0';
   // list of articles fetched from the API.
   const [articles, setArticles] = useState([]);
   // Stores the search query or category.
@@ -19,7 +19,6 @@ function App() {
   const [loading, setLoading] = useState(false);
   // selected language for fetching articles.
   const [language, setLanguage] = useState('en');
-
   ///////
   //Fetch News from NewsAPI NewsAPI.
   //search for in News. // page of results to fetch // language of the News to fetch.
