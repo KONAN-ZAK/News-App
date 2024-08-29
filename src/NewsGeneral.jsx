@@ -1,7 +1,6 @@
 import Card1 from './Card1';
 import Footer from './Footer';
 function NewsGeneral({ articles }) {
-  console.log('This is the general article', articles);
   return (
     <div
       className="flex justify-between gap-4 flex-wrap md:flex-nowrap 

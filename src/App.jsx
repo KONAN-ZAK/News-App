@@ -8,11 +8,11 @@ import NewsDetailsPage from './NewsDetailsPage';
 // import ExternalNewsPage from './ExternalNewsPage';
 
 function App() {
-  const ApiKey = 'dbb107fa60514a0cb3c0a4abece435d0';
+  const ApiKey = '2fc86d5e7bf946569a498c03397100ba';
   // list of articles fetched from the API.
   const [articles, setArticles] = useState([]);
   // Stores the search query or category.
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState('BUSINESS');
   // Keep tracks of the current page.
   const [page, setPage] = useState(1);
   // check if the application is currently fetching data.
@@ -38,7 +38,7 @@ function App() {
       &language=${lang}&apiKey=${ApiKey}`);
       // response is awaited and then converted to JSON.
       const data = await response.json();
-      console.log('This is the data',data);
+      // console.log('This is the data',data);
 
       if (data.articles) {
         setArticles((prevArticles) => [...prevArticles, ...data.articles]);
@@ -51,9 +51,9 @@ function App() {
       // After the request is completed (whether successful or not), loading is set to false
       setLoading(false);
     }
-
-    console.log(articles);
   };
+  console.log(articles);
+
   ///////////////////////////
   // triggered whenever we search or language state changes..
   useEffect(() => {
@@ -85,11 +85,11 @@ function App() {
     setLanguage(lang);
   };
 
-  // // Handle home click
-  // const handleHomeClick = () => {
-  //   setQuery('');
-  //   setLanguage('en');
-  // };
+  // Handle home click
+  const handleHomeClick = () => {
+    setQuery('');
+    setLanguage('en');
+  };
 
   // Handle scroll event to load more articles
   const handleScroll = () => {
@@ -108,23 +108,28 @@ function App() {
 
   ///////////////////////////////////////////////
   return (
-    
     <Router>
       {/* // flex row has (sideBar ) and (NavBar & NewsSideScroller & NewsGeneral) */}
       <div className="flex flex-row ">
-        <SideBar />
-
+        <SideBar
+          onCategorySelect={handleCategorySelect}
+          onHomeClick={handleHomeClick}
+        />
         {/* flex-col (NavBar) and (NewsSideScroller & NewsGeneral)   */}
         <div className=" flex flex-col h-screen w-full bg-mainColor">
-          <NavBar />
-
+          <NavBar
+            onHomeClick={handleHomeClick}
+            onLanguageSelect={handleLanguageSelect}
+          />
           {/* Flex-col (NewsSideScroller) and ( NewsGeneral)   */}
           <div className="h-full flex flex-col gap-5 p-4 overflow-y-scroll lg:p-8">
             {/* holding 2 components for Routering it  */}
-
             <Routes>
               <Route path="/" element={<NewsHolder articles={articles} />} />
-              <Route path="/newsDetails/:id" element={<NewsDetailsPage articles={articles} />} />
+              <Route
+                path="/newsDetails/:id"
+                element={<NewsDetailsPage articles={articles} />}
+              />
             </Routes>
             {loading && <div className="text-center">Loading...</div>}
           </div>

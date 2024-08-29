@@ -4,8 +4,9 @@ import { useContext, useState } from 'react';
 import logo from './assets/logo.svg';
 import SideBar from './SideBar';
 import { SideBarContext } from './Context/SideBarContext';
+import { Link } from 'react-router-dom';
 
-function NavBar() {
+function NavBar({ onHomeClick, onLanguageSelect }) {
   // State to manage the visibility of the input
   const [isSearchVisible, setIsSearchVisible] = useState(false);
 
@@ -64,10 +65,11 @@ function NavBar() {
           />
         </label>
 
-        {/* the icon  */}
+        {/* the PageLogo */}
         <div className="flex flex-1 justify-center">
-          {/* logo  */}
-          <img src={logo} alt="logo" className=" h-7 lg:hidden " />
+          <Link to="/" onClick={onHomeClick}>
+            <img src={logo} alt="logo" className=" h-7 lg:hidden " />
+          </Link>
         </div>
 
         {/* search bar for mobile screen  */}
@@ -98,12 +100,18 @@ function NavBar() {
         </div>
 
         {/* Language options */}
-        <select className="p-3 bg-mainColor hidden lg:flex">
-          <option value="International">INT</option>
-          <option value="English">EN</option>
-          <option value="Arabic">AR</option>
-          <option value="Turkish">TR</option>
-          <option value="Russian">RU</option>
+        <select
+          className="p-3 bg-mainColor hidden lg:flex"
+          onChange={(e) => {
+            onLanguageSelect(e.target.value);
+          }}
+        >
+          <option value="en">EN</option>
+          <option value="ar">AR</option>
+          <option value="fr">FR</option>
+          <option value="fa">FA</option>
+          <option value="tr">TR</option>
+          <option value="ru">RU</option>
         </select>
       </div>
     </header>

@@ -24,6 +24,7 @@ const NewsDetailsPage = ({ articles }) => {
         </div>
 
         <div className="w-full h-fit text-[1rem] lg:text-[1.2rem]">{newData?.description}</div>
+        <div className='text-blue-500 text-[0.8rem] hover:text-slate-700'><a href={newData?.url}>Orginal Article....</a></div>
           </div>
         </div>
        
