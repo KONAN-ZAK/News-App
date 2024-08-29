@@ -8,7 +8,7 @@ import NewsDetailsPage from './NewsDetailsPage';
 // import ExternalNewsPage from './ExternalNewsPage';
 
 function App() {
-  const ApiKey = '2fc86d5e7bf946569a498c03397100ba';
+  const ApiKey = 'd471495a1cb64d1f8a4c488af214fd5e';
   // list of articles fetched from the API.
   const [articles, setArticles] = useState([]);
   // Stores the search query or category.
@@ -52,7 +52,7 @@ function App() {
       setLoading(false);
     }
   };
-  console.log(articles);
+  // console.log(articles);
 
   ///////////////////////////
   // triggered whenever we search or language state changes..
@@ -87,7 +87,7 @@ function App() {
 
   // Handle home click
   const handleHomeClick = () => {
-    setQuery('');
+    setQuery('BUSINESS');
     setLanguage('en');
   };
 
@@ -120,12 +120,14 @@ function App() {
           <NavBar
             onHomeClick={handleHomeClick}
             onLanguageSelect={handleLanguageSelect}
+            apiKey={ApiKey}
+            onSearch={handleSearch}
           />
           {/* Flex-col (NewsSideScroller) and ( NewsGeneral)   */}
           <div className="h-full flex flex-col gap-5 p-4 overflow-y-scroll lg:p-8">
             {/* holding 2 components for Routering it  */}
             <Routes>
-              <Route path="/" element={<NewsHolder articles={articles} />} />
+              <Route path="/" element={<NewsHolder articles={articles} />}/>
               <Route
                 path="/newsDetails/:id"
                 element={<NewsDetailsPage articles={articles} />}

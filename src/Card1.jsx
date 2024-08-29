@@ -5,7 +5,7 @@ function Card1({ article, index, className }) {
   const handleNewDetailsPage = (index) => {
     navigate(`/newsDetails/${index}`);
   };
-console.log(article)
+// console.log(article)
  return (
  (article.urlToImage && <div className={className} onClick={() => handleNewDetailsPage(index)}>
     
@@ -28,7 +28,7 @@ console.log(article)
         <div className="w-full lg:h-[5rem] overflow-hidden">
           {article?.title}
         </div>
-    </div> )
+    </div>)
   );
 }
 export default Card1;
