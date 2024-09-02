@@ -5,15 +5,22 @@ function Card1({ article, index, className }) {
   const handleNewDetailsPage = (index) => {
     navigate(`/newsDetails/${index}`);
   };
-// console.log(article)
- return (
- (article.urlToImage && <div className={className} onClick={() => handleNewDetailsPage(index)}>
-    
+
+//the hour published date
+const getPublishedHour = (dateString) => {
+  const date = new Date(dateString);
+  return date.getHours();
+};
+
+  // console.log(article)
+  return (
+    article.urlToImage && article.publishedAt && (
+      <div className={className} onClick={() => handleNewDetailsPage(index)}>
         {/* image section */}
         <div className=" h-[5rem] lg:h-[7rem] 2xl:h-[9rem] ">
           <img
             src={article?.urlToImage}
-            alt="hggt"
+            alt="Artical Image"
             className=" h-full w-full rounded-lg"
           />
         </div>
@@ -21,14 +28,15 @@ function Card1({ article, index, className }) {
         {/*the card news title time*/}
         <div className="flex justify-between text-gray-500 pt-1 pb-2">
           <p>BBC NEWS</p>
-          <p>10 HOURS</p>
+          <p>{getPublishedHour(article.publishedAt)} HOURS</p>
         </div>
 
         {/*the card description*/}
         <div className="w-full lg:h-[5rem] overflow-hidden">
           {article?.title}
         </div>
-    </div>)
+      </div>
+    )
   );
 }
 export default Card1;

@@ -52,7 +52,7 @@ function App() {
       setLoading(false);
     }
   };
-  // console.log(articles);
+  console.log(articles);
 
   ///////////////////////////
   // triggered whenever we search or language state changes..
@@ -127,13 +127,13 @@ function App() {
           <div className="h-full flex flex-col gap-5 p-4 overflow-y-scroll lg:p-8">
             {/* holding 2 components for Routering it  */}
             <Routes>
-              <Route path="/" element={<NewsHolder articles={articles} />}/>
+              <Route path="/" element={<NewsHolder articles={articles} />} />
               <Route
                 path="/newsDetails/:id"
                 element={<NewsDetailsPage articles={articles} />}
               />
             </Routes>
-            {loading && <div className="text-center">Loading...</div>}
+            {loading && <div className="text-center">Loading</div>}
           </div>
         </div>
       </div>

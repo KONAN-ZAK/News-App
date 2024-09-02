@@ -28,7 +28,7 @@ const NewsDetailsPage = ({ articles }) => {
         </div>
       </div>
     </div>
-    //////////////////////////////////////////
+  
   );
 };
 
