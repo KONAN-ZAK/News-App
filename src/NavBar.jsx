@@ -77,7 +77,6 @@ function NavBar({ onHomeClick, onLanguageSelect, apiKey, onSearch }) {
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   // State to manage the visibility of the input
   const [isSearchBarVisible, setIsSearchBarVisible] = useState(false);
-
   const { setIsMenuVisible } = useContext(SideBarContext);
   // Function to toggle the visibility
   const toggleSearchBarVisibility = () => {
