@@ -5,10 +5,8 @@ import SideBar from './SideBar';
 import NewsHolder from './NewsHolder';
 import NewsDetailsPage from './NewsDetailsPage';
 
-// import ExternalNewsPage from './ExternalNewsPage';
-
 function App() {
-  const ApiKey = 'd471495a1cb64d1f8a4c488af214fd5e';
+  const ApiKey = 'b3d105a70a3745f38ee258d310e8730e';
   // list of articles fetched from the API.
   const [articles, setArticles] = useState([]);
   // Stores the search query or category.
@@ -52,7 +50,7 @@ function App() {
       setLoading(false);
     }
   };
-  console.log(articles);
+  // console.log(articles);
 
   ///////////////////////////
   // triggered whenever we search or language state changes..

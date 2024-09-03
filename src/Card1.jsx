@@ -6,11 +6,11 @@ function Card1({ article, index, className }) {
     navigate(`/newsDetails/${index}`);
   };
 
-//the hour published date
-const getPublishedHour = (dateString) => {
-  const date = new Date(dateString);
-  return date.getHours();
-};
+  //the hour published date
+  const getPublishedHour = (dateString) => {
+    const date = new Date(dateString);
+    return date.getHours();
+  };
 
   // console.log(article)
   return (
