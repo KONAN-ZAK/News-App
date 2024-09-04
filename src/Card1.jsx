@@ -14,7 +14,8 @@ function Card1({ article, index, className }) {
 
   // console.log(article)
   return (
-    article.urlToImage && article.publishedAt && (
+    article.urlToImage &&
+    article.publishedAt && (
       <div className={className} onClick={() => handleNewDetailsPage(index)}>
         {/* image section */}
         <div className=" h-[5rem] lg:h-[7rem] 2xl:h-[9rem] ">
@@ -27,7 +28,7 @@ function Card1({ article, index, className }) {
 
         {/*the card news title time*/}
         <div className="flex justify-between text-gray-500 pt-1 pb-2">
-          <p>BBC NEWS</p>
+          <p>{article.source?.name}</p>
           <p>{getPublishedHour(article.publishedAt)} HOURS</p>
         </div>
 
