@@ -6,7 +6,7 @@ import NewsHolder from './NewsHolder';
 import NewsDetailsPage from './NewsDetailsPage';
 
 function App() {
-  const ApiKey = 'b3d105a70a3745f38ee258d310e8730e';
+  const ApiKey = 'c7d18cc1f693425695f5e2bc018ebf25';
   // list of articles fetched from the API.
   const [articles, setArticles] = useState([]);
   // Stores the search query or category.
